@@ -1,0 +1,631 @@
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: $font-family;
+    height: 100vh;
+    font-size: $font-size-base;
+}
+
+ul {
+    list-style-type: none;
+}
+
+select {
+    @include reset-appearance;
+    @include button-style;
+}
+
+.products__filter-button {
+    @include reset-appearance;
+    @include button-style;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    background: url(), $secondary-color;
+    background-image: url(img/header.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 735px;
+
+    &-catalog,
+    &-cart {
+        background: url(), $secondary-color;
+        background-image: url(img/Catalog.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 424px;
+    }
+
+    &-cart {
+        background-image: url(img/cart-background.jpeg);
+    }
+}
+
+header {
+    height: 76px;
+}
+
+.header {
+    display: grid;
+    align-items: center;
+    border-bottom: 0.5px solid rgba($primary-color, 0.8);
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__logo {
+        @include text-large;
+        color: $primary-color;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__input {
+        @include text-base;
+        background: transparent;
+        box-sizing: border-box;
+        border: 1px solid $primary-color;
+        border-radius: 20px;
+        padding-left: 32px;
+        width: 288px;
+        height: 41px;
+        outline: none;
+
+        &::placeholder {
+            color: $primary-color;
+        }
+    }
+
+    &__links-box {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        position: relative;
+    }
+
+    &__links {
+        @include text-base;
+        color: $primary-color;
+        letter-spacing: 0%;
+        text-align: left;
+
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+
+    &__window{
+        transition: 2s;
+        position: absolute;
+        background: white;
+        padding: 40px 48px;
+        top: 47px;
+        right: 0px;
+        min-width: 573px;
+        min-height: 480px;
+        box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+        display: none;
+        z-index: 10;
+    }
+
+    &__box{
+        min-width: 477px;
+        min-height: 400px;
+    }
+    &__cart-cards1{
+        position: relative;
+        
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__cart-cards{
+        position: relative;
+        border-top: 0.5px solid rgb(202, 205, 216);
+        padding-top: 25px;
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__cart-left {
+        display: flex;
+        gap: 24px;
+    }
+    &__cart-img {
+        width: 144px;
+        height: 144px;
+    }
+    &__cart-info {
+        width: 190px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__cart-name {
+        @include name;
+    }
+    &__cart-price {
+        @include price;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__cart-links-box {
+        padding-top: 54px;
+        display: flex;
+        gap: 24px;
+    }
+    &__cart-links {
+        @include links;
+        
+    }
+    &__cart-input1{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        border-radius: 6px;
+        background: rgb(247, 246, 246);
+        width: 71px;
+        height: 51px;
+        outline: none;
+        border-color: transparent;
+        @include text-small;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        text-align: center;
+    }
+    &__cart-input {
+        position: absolute;
+        right: 0px;
+        top: 25px;
+        border-radius: 6px;
+        background: rgb(247, 246, 246);
+        width: 71px;
+        height: 51px;
+        outline: none;
+        border-color: transparent;
+        @include text-small;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        text-align: center;
+    }
+    &__confirm {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__cart-check {
+        display: flex;
+        @include text-medium;
+        color: $text-color;
+        font-weight: 400;
+        gap: 10px;
+    }
+    &__cart-prices{
+        @include price;
+    }
+
+    &__btn{
+        box-sizing: border-box;
+        border: 1px solid $text-color;
+        background-color: transparent;
+        border-radius: 20px;
+        width: 207px;
+        height: 40px;
+        @include text-base;
+        color: $text-color;
+    }
+    .header__links[href="cart.html"]:hover ~ .header__window,
+    .header__window:hover {
+    display: block;
+}
+
+    &-mob {
+        display: none;
+    }
+}
+
+.title {
+    &__title {
+        @include text-xxlarge;
+        color: $primary-color;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-top: 64px;
+        margin-bottom: 16px;
+    }
+
+    &-catalog {
+        margin-top: 128px;
+    }
+
+    &__slogan {
+        @include text-medium;
+        color: $primary-color;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    &__link {
+        @include text-base;
+        color: $primary-color;
+        letter-spacing: 0%;
+        text-align: left;
+        text-decoration-line: underline;
+    }
+}
+
+.for-box {
+    padding-top: 64px;
+}
+
+.heading {
+    @include heading-style;
+}
+
+.for {
+    margin-top: 32px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+
+    &__item {
+        height: 415px;
+        grid-column: span 4;
+        color: $primary-color;
+        @include text-medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_big {
+            grid-column: span 6;
+        }
+
+        &_1 {
+            background-image: url(img/for-1.jpeg);
+        }
+
+        &_2 {
+            background-image: url(img/for-2.jpeg);
+        }
+
+        &_3 {
+            background-image: url(img/for-3.jpeg);
+        }
+
+        &_4 {
+            background-image: url(img/for-4.jpeg);
+        }
+
+        &_5 {
+            background-image: url(img/for-5.jpeg);
+        }
+    }
+}
+
+.special {
+    &__text {
+        @include heading-style;
+        margin-top: 64px;
+        margin-bottom: 32px;
+    }
+
+    &__cards {
+        width: 378px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__imgs {
+        position: relative;
+    }
+
+    &__icons-box {
+        filter: drop-shadow(0px 0px 2px black);
+        position: absolute;
+        right: 12px;
+        top: 13px;
+        display: flex;
+        gap: 23px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__cards:hover &__icons-box {
+        opacity: 1;
+    }
+
+    &__icons {
+        cursor: pointer;
+    }
+
+    &__products {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    &__product {
+        @include text-medium;
+        color: $text-color;
+        margin-top: 10px;
+        margin-bottom: 9px;
+    }
+
+    &__description {
+        @include text-small;
+        color: $hover-color;
+        margin-bottom: 12px;
+    }
+
+    &__prices {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__lowprice {
+        @include text-medium;
+        color: $text-color;
+    }
+
+    &__highprice {
+        @include text-medium;
+        color: $hover-color;
+        text-decoration-line: line-through;
+    }
+}
+
+.products {
+    margin-bottom: 39px;
+
+    &__catalog-navigation {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 36px;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__link {
+        @include text-base;
+        color: $link-color;
+    }
+
+    &__filtr-box {
+        position: relative;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__filtr,
+    &__filter-button {
+        @include text-base;
+        box-sizing: border-box;
+        border: 1px solid $secondary-color;
+        border-radius: 20px;
+        background-color: transparent;
+        width: 227px;
+        height: 40px;
+        padding-left: 23px;
+    }
+
+    &__filter-button {
+        width: 182px;
+    }
+
+    &__box {
+        display: flex;
+        column-gap: 32px;
+        row-gap: 56px;
+        flex-wrap: wrap;
+    }
+
+    &__cards {
+        width: 378px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__images {
+        width: 100%;
+    }
+
+    &__img,
+    &__special__imgs {
+        position: relative;
+    }
+
+    &__icons-box {
+        filter: drop-shadow(0px 0px 2px black);
+        position: absolute;
+        right: 12px;
+        top: 13px;
+        display: flex;
+        gap: 23px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__cards:hover &__icons-box {
+        opacity: 1;
+    }
+
+    &__icons {
+        cursor: pointer;
+    }
+
+    &__text {
+        @include heading-style;
+        margin-top: 64px;
+        margin-bottom: 32px;
+    }
+
+    &__name {
+        @include text-medium;
+        color: $text-color;
+        margin-bottom: 8px;
+    }
+
+    &__description {
+        @include text-small;
+        color: $hover-color;
+    }
+
+    &__price {
+        @include text-medium;
+        color: $text-color;
+        margin-top: 12px;
+    }
+}
+
+.catalog {
+    @include text-base;
+    color: $text-color;
+    text-decoration-line: underline;
+}
+
+.footer {
+    background: rgb(247, 246, 246);
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 59px;
+    align-items: flex-start;
+
+    &__content {
+        display: flex;
+        gap: 129px;
+    }
+
+    &__title {
+        @include text-medium;
+        color: $text-color;
+        margin-bottom: 12px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 12px;
+    }
+
+    &__links {
+        @include text-small;
+        color: $hover-color;
+
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+
+    &__2list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 20px;
+    }
+
+
+
+    &__contacts {
+        @include text-medium;
+        color: $text-color;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    &__sub {
+        @include text-small;
+        color: $text-color;
+    }
+
+    &__input {
+        @include text-base;
+        box-sizing: border-box;
+        border: 1px solid $secondary-color;
+        border-radius: 20px;
+        width: 260px;
+        height: 40px;
+        background: $primary-color;
+        padding-left: 17px;
+        padding-right: 17px;
+        color: $secondary-color;
+        outline: none;
+    }
+
+    &__button {
+        @include text-small;
+        background: rgba(222, 215, 215, 0.41);
+        border: 1px solid $primary-color;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 260px;
+        height: 40px;
+        color: $text-color;
+        &:hover{
+            transition: 0.6s;
+            background: black;
+            color: white;
+        }
+    }
+
+    &__icon {
+        transition: filter 0.3s ease; 
+
+        &:hover {
+            filter: brightness(0); 
+        }
+    }
+}
+
+
+
+@import 'cart';
+@import 'filter-form';
+@import 'tablet';
+@import 'mobile';
