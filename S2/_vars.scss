@@ -1,0 +1,158 @@
+$font-family: "Montserrat", serif;
+$primary-color: rgb(255, 255, 255);
+$secondary-color: rgb(196, 196, 196);
+$text-color: rgb(0, 0, 0);
+$link-color: rgb(0, 0, 0);
+$hover-color: rgb(136, 136, 136);
+$font-family: "Montserrat", serif;
+$primary-color: rgb(255, 255, 255);
+$secondary-color: rgb(196, 196, 196);
+$text-color: rgb(0, 0, 0);
+$link-color: rgb(0, 0, 0);
+$hover-color: rgb(136, 136, 136);
+
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-very-small: 18px;
+$font-size-medium: 24px;
+$font-size-large: 36px;
+$font-size-xlarge: 48px;
+$font-size-xxlarge: 64px;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+$line-height-small: 17px;
+$line-height-very-small: 22px;
+$line-height-medium: 20px;
+$line-height-large: 29px;
+$line-height-xlarge: 44px;
+$line-height-xxlarge: 70px;
+
+@mixin links {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration-line: underline;
+}
+
+@mixin name{
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+@mixin description{
+    color: rgb(136, 136, 136);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+@mixin price{
+    color: rgb(5, 5, 5);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+@mixin link-style {
+    color: $link-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+@mixin reset-appearance {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+@mixin button-style {
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid $secondary-color;
+    border-radius: 20px;
+    padding-left: 23px;
+    padding-right: 42px;
+    font-family: inherit;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-medium;
+    width: 182px;
+    background-image: url(img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+@mixin heading-style {
+    color: $text-color;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-large;
+}
+
+@mixin text-base {
+    font-family: $font-family;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-medium;
+}
+@mixin text-very-small {
+    font-family: $font-family;
+    font-size: $font-size-very-small;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-very-small;
+}
+
+@mixin text-small {
+    font-family: $font-family;
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-small;
+}
+
+@mixin text-medium {
+    font-family: $font-family;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-large;
+}
+
+@mixin text-large {
+    font-family: $font-family;
+    font-size: $font-size-large;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-xlarge;
+}
+
+@mixin text-xlarge {
+    font-family: $font-family;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-large;
+}
+
+@mixin text-xxlarge {
+    font-family: $font-family;
+    font-size: $font-size-xxlarge;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-xxlarge;
+}
