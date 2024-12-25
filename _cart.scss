@@ -112,6 +112,7 @@
         height: 41px;
         @include text-base;
         color: $text-color;
+        cursor: pointer;
         &:hover{
             transition: 0.6s;
             background: black;
@@ -174,6 +175,7 @@
         background-color: white;
         @include text-small;
         color: $text-color;
+        cursor: pointer;
         &:hover{
             transition: 0.6s;
             background: black;
@@ -188,6 +190,8 @@
 
     &__text {
         @include heading-style;
+        width: 729px;
+        line-height: 59px;
         margin-top: 64px;
         margin-bottom: 32px;
     }

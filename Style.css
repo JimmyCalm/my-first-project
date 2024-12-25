@@ -299,6 +299,11 @@ header {
   line-height: 20px;
   color: rgb(0, 0, 0);
 }
+.header__btn:hover {
+  transition: 0.6s;
+  background: black;
+  color: white;
+}
 .header .header__links[href="cart.html"]:hover ~ .header__window,
 .header .header__window:hover {
   display: block;
@@ -395,6 +400,7 @@ header {
   font-size: 48px;
   font-weight: 600;
   line-height: 29px;
+  line-height: 59px;
   margin-top: 64px;
   margin-bottom: 32px;
 }
@@ -507,6 +513,7 @@ header {
   width: 227px;
   height: 40px;
   padding-left: 23px;
+  cursor: pointer;
 }
 .products__filter-button {
   width: 182px;
@@ -680,6 +687,7 @@ header {
   width: 260px;
   height: 40px;
   color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 .footer__button:hover {
   transition: 0.6s;
@@ -829,6 +837,7 @@ header {
   font-weight: 400;
   line-height: 20px;
   color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 .cart__form-button:hover {
   transition: 0.6s;
@@ -900,6 +909,7 @@ header {
   font-weight: 400;
   line-height: 17px;
   color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 .cart__buttons:hover {
   transition: 0.6s;
@@ -915,6 +925,8 @@ header {
   font-size: 48px;
   font-weight: 600;
   line-height: 29px;
+  width: 729px;
+  line-height: 59px;
   margin-top: 64px;
   margin-bottom: 32px;
 }
@@ -1049,6 +1061,12 @@ header {
   align-self: flex-end;
   max-width: 190px;
   width: 100%;
+  cursor: pointer;
+}
+.filter__button:hover {
+  transition: 0.6s;
+  background: black;
+  color: white;
 }
 
 .radio {
@@ -1284,6 +1302,9 @@ header {
   }
   .special__cards {
     width: 345px;
+  }
+  .special__text {
+    width: 729px;
   }
   .special-cart__products {
     gap: 29px;

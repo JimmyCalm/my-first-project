@@ -235,6 +235,11 @@ header {
         height: 40px;
         @include text-base;
         color: $text-color;
+        &:hover{
+            transition: 0.6s;
+            background: black;
+            color: white;
+        }
     }
     .header__links[href="cart.html"]:hover ~ .header__window,
     .header__window:hover {
@@ -329,6 +334,7 @@ header {
 .special {
     &__text {
         @include heading-style;
+        line-height: 59px;
         margin-top: 64px;
         margin-bottom: 32px;
     }
@@ -441,6 +447,7 @@ header {
         width: 227px;
         height: 40px;
         padding-left: 23px;
+        cursor: pointer;
     }
 
     &__filter-button {
@@ -607,6 +614,7 @@ header {
         width: 260px;
         height: 40px;
         color: $text-color;
+        cursor: pointer;
         &:hover{
             transition: 0.6s;
             background: black;

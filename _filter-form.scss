@@ -57,6 +57,12 @@
         align-self: flex-end;
         max-width: 190px;
         width: 100%;
+        cursor: pointer;
+        &:hover{
+            transition: 0.6s;
+            background: black;
+            color: white;
+        }
     }
 }
 
