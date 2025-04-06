@@ -4,4 +4,6 @@
 
 Здесь были примененны следующие технологии: html, css, scss, flex, grid
 
+А также всё выполнено согласно требованиям БЭМ
+
 Ссылка на сайт для проверки: https://jimmycalm.github.io/my-first-project/index.html
